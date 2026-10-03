@@ -34,10 +34,11 @@
         </div>
     </nav>
 
+    <!-- THE FIX: Broadened the contact subtitle to invite inquiries across Sports, Media, Entertainment, and Product Leadership -->
     <main class="contact-wrapper">
         <div class="contact-card reveal-on-scroll">
             <h2 class="contact-title">Initialize Communication</h2>
-            <p class="contact-subtitle">Available for architectural consultations, freelance development, and robust full-stack [development encompassing both the front-end user interface and the back-end server logic] engineering roles.</p>
+            <p class="contact-subtitle">Open to high-impact collaborations across Product Management, Sports Data & Scouting, Esports Operations, Creative Media Production, and Strategic Advisory. Send a message below to connect with me directly on WhatsApp.</p>
             
             <div class="contact-info-box">
                 <div class="contact-info-item">
@@ -69,8 +70,9 @@
                     <p id="message-error" class="form-error hidden">Data payload cannot be empty.</p>
                 </div>
                 
+                <!-- THE FIX: Updated button text to clearly reflect direct WhatsApp message transmission -->
                 <button type="submit" class="btn-submit">
-                    Execute Transmission
+                    Send Message via WhatsApp
                 </button>
             </form>
 
@@ -127,7 +129,23 @@
                 }
 
                 if(isValid) {
-                    alert('Validation successful. Data ready for backend processing.');
+                    /* THE FIX: Packages form inputs into an encoded URL and opens an instant, direct WhatsApp conversation */
+                    const senderName = nameInput.value.trim();
+                    const senderEmail = emailInput.value.trim();
+                    const senderMsg = msgInput.value.trim();
+
+                    /* [URL Encoding: the process of converting special characters and spaces into percent-encoded sequences so they can be safely transmitted across internet addresses] */
+                    const formattedMessage = encodeURIComponent(
+                        `*New Inquiry from Portfolio*\n\n` +
+                        `*Name:* ${senderName}\n` +
+                        `*Email:* ${senderEmail}\n\n` +
+                        `*Message:*\n${senderMsg}`
+                    );
+
+                    /* [WhatsApp Universal Link: an international web standard that prompts the user's browser or mobile app to open a chat directly with a specific international phone number] */
+                    const whatsappUrl = `https://wa.me/2347044015460?text=${formattedMessage}`;
+
+                    window.open(whatsappUrl, '_blank');
                     form.reset();
                 }
             });

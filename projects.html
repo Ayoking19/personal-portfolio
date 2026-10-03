@@ -34,29 +34,23 @@
     <main class="page-container-wide">
         <h2 class="section-title reveal-on-scroll">Major Deployments</h2>
         
+        <!-- THE FIX: Rewrote all 4 project cards with PM summaries and mapped them to their unique Modal boxes -->
         <div class="projects-grid">
             
             <article class="project-card reveal-on-scroll">
                 <div class="project-header">
                     <h3 class="project-title">SocialApp</h3>
                     <div class="project-links">
-                        <a href="https://socialappwebsite.me/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                        <a href="https://social-media-solitary-feather-1429.fly.dev/" target="_blank" rel="noopener noreferrer" class="project-link primary">
                             Live Demo 
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
-                        <a href="https://github.com/Ayoking19/SocialApp" target="_blank" rel="noopener noreferrer" class="project-link secondary">
-                            Repository
-                            <svg fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
-                        </a>
                     </div>
                 </div>
-                <p class="project-tags">Java | JavaScript | MySQL | Capacitor JS</p>
+                <p class="project-tags">Product Strategy | Gamification | UX Simplification</p>
                 <div class="project-description">
-                    <p>Engineered a comprehensive social media platform functioning seamlessly across both web and mobile environments.</p>
-                    <p>Utilized Capacitor JS [a cross-platform native runtime that allows web applications to run natively on mobile devices] to bridge the web application architecture into a native APK [Android Package Kit, the file format used by the Android operating system for the distribution and installation of mobile apps].</p>
-                    <p>Implemented a Split-Query Search Engine [a database design pattern that runs entirely separate SQL queries to decouple distinct data types, merging them into a single formatted JSON array] to drastically reduce query clutter and improve data retrieval speed.</p>
-                    <p>Deployed a Deep-Link Glow Engine [a custom routing system that mathematically reconstructs thread hierarchy, smoothly scrolls the target component into view, and triggers CSS animations] to handle complex cross-platform user navigation.</p>
-                    <p>Integrated a robust Mobile Notification Engine utilizing Firebase Cloud Messaging [a cross-platform messaging solution that allows developers to reliably send messages and notifications] to route foreground and background taps directly to specific application states.</p>
+                    <p>A unified social ecosystem designed to eliminate digital platform fatigue. Prioritized User Empathy to create a frictionless, zero-complexity interface, integrating a gamified interaction leaderboard to drastically increase User Retention and daily active sessions.</p>
+                    <button type="button" class="btn btn-secondary open-modal-btn" data-target="socialapp-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
 
@@ -74,18 +68,16 @@
                         </a>
                     </div>
                 </div>
-                <p class="project-tags">Python | pandas | scikit-learn | Streamlit</p>
+                <p class="project-tags">Cross-Functional Leadership | Market Analytics | Accessible UX</p>
                 <div class="project-description">
-                    <p>Developed a Supervised Regression [a type of machine learning where the model learns from a dataset that includes both the input features and the correct output answer] model to accurately forecast real estate values.</p>
-                    <p>Constructed a robust Data Preprocessing Pipeline utilizing pandas [a software library written for data manipulation and analysis] and scikit-learn [a robust machine learning library] to handle missing numerical values via Median Imputation and categorically scale features through Standardization.</p>
-                    <p>Evaluated algorithmic efficacy by comparing Baseline Ordinary Least Squares models against advanced Random Forest Regressors [an ensemble learning method that constructs a multitude of decision trees during training to improve accuracy and control overfitting].</p>
-                    <p>Deployed the serialized model into a live production environment utilizing Streamlit [an open-source app framework that turns Python scripts into interactive web applications], providing users with dynamic input Widgets [graphical control elements] to execute live Inference.</p>
+                    <p>A web-based predictive application designed to eliminate market information asymmetry. Managed a 7-member cross-functional pipeline to transform complex machine learning data into an accessible, dynamic widget interface.</p>
+                    <button type="button" class="btn btn-secondary open-modal-btn" data-target="housing-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
 
-            <article class="project-card wide reveal-on-scroll">
+            <article class="project-card reveal-on-scroll">
                 <div class="project-header">
-                    <h3 class="project-title">Secure User Authentication System</h3>
+                    <h3 class="project-title">Authentication System</h3>
                     <div class="project-links">
                         <a href="https://authentication-web-xp8d.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link primary">
                             Live Demo 
@@ -97,21 +89,134 @@
                         </a>
                     </div>
                 </div>
-                <p class="project-tags">Node.js | Express | MongoDB | JavaScript</p>
-                <div class="project-description project-description-grid">
-                    <div>
-                        <p>Architected a full-stack MEN [MongoDB, Express, Node.js] application utilizing the Client-Server Model [a distributed application structure that partitions tasks or workloads between servers and clients].</p>
-                        <p>Developed a responsive Frontend [the visual layer of the application that the user interacts with directly] featuring a Glassmorphism aesthetic and utilizing the URLSearchParams interface to trigger dynamic DOM Manipulation [the process of using JavaScript to visually change the HTML structure after the page has loaded].</p>
+                <p class="project-tags">MVP Strategy | Identity Architecture | Decoupled Systems</p>
+                <div class="project-description">
+                    <p>Architected a bulletproof trust gateway for a localized service marketplace. Delivered a highly focused Minimum Viable Product (MVP) that completely decoupled the visual interface from the security logic, drastically reducing future Time-to-Market.</p>
+                    <button type="button" class="btn btn-secondary open-modal-btn" data-target="auth-modal" style="margin-top: 1rem;">Read Case Study</button>
+                </div>
+            </article>
+
+            <article class="project-card reveal-on-scroll">
+                <div class="project-header">
+                    <h3 class="project-title">DigitalBank</h3>
+                    <div class="project-links">
+                        <a href="https://social-media-solitary-feather-1429.fly.dev/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                            Live Demo 
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                        <a href="https://github.com/Ayoking19/DigitalBank" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            Repository
+                            <svg fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
+                        </a>
                     </div>
-                    <div>
-                        <p>Constructed a robust Backend [the server-side logic responsible for routing traffic, enforcing security, and processing data] adhering to RESTful principles [a set of rules for creating web services] and secure Middleware Implementation via Express.js.</p>
-                        <p>Configured a MongoDB Atlas cluster, strictly enforcing a Database Schema via Mongoose Object Data Modeling to ensure unique user credentials, and managed secure CI/CD deployment via Render using protected Environment Variables.</p>
-                    </div>
+                </div>
+                <p class="project-tags">Fintech Strategy | Behavioral Design | Automated Systems</p>
+                <div class="project-description">
+                    <p>A production-ready financial ecosystem acting as a behavioral conditioning tool. Integrated a timezone-aware Background Cron Engine to automate precision savings sweeps, enforcing financial discipline through Algorithmic Cooling Periods.</p>
+                    <button type="button" class="btn btn-secondary open-modal-btn" data-target="digitalbank-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
 
         </div>
     </main>
+
+    <!-- THE FIX: Injected all 4 dynamic Modals containing the comprehensive PM Case Studies -->
+
+    <!-- Modal 1: SocialApp -->
+    <div class="modal-overlay" id="socialapp-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="case-study-title">SocialApp: Eradicating Platform Fatigue</h2>
+            <div class="case-study-meta">CASE STUDY // PRODUCT STRATEGY & UX GAMIFICATION</div>
+            
+            <div class="case-study-section">
+                <h4>1. The Context & Problem</h4>
+                <p>Modern digital users face severe platform fatigue caused by Digital Fragmentation—the frustrating necessity of switching between multiple specialized platforms just to message friends, consume public feeds, and discover trends. This context-switching leads to user exhaustion and abandoned sessions.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h4>2. The Strategic Approach</h4>
+                <p>The product was designed around a core philosophy of <strong>User Empathy</strong>. I established a strict Visual Hierarchy, placing high-frequency actions—creating posts, searching profiles, and messaging—in obvious positions to eliminate the learning curve. By dramatically reducing Cognitive Load, users of any technical skill level can navigate complex social interactions without hesitation.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h4>3. The Outcome & Business Value</h4>
+                <p>To drive engagement, I engineered a dynamic, time-filtered leaderboard showcasing the most interacted posts. This Gamification established a healthy competitive loop, incentivizing creators to craft higher-quality content to reach the "Top 100." The final business value is a highly sticky, unified ecosystem that maximizes User Retention and transforms casual visitors into a loyal daily community.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: House Price Predictor -->
+    <div class="modal-overlay" id="housing-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="case-study-title">House Price Predictor: Democratizing Data</h2>
+            <div class="case-study-meta">CASE STUDY // DATA PIPELINE & CROSS-FUNCTIONAL LEADERSHIP</div>
+            
+            <div class="case-study-section">
+                <h4>1. The Context & Problem</h4>
+                <p>The real estate market is plagued by Information Asymmetry. Real estate pricing depends on high-dimensional data, making it mathematically impossible for end-consumers to calculate accurate baseline values without emotional bias or paying expensive intermediaries.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h4>2. The Strategic Approach</h4>
+                <p>I organized this initiative as a 7-member cross-functional pipeline. The workload was distributed evenly across distinct phases—from Exploratory Data Analysis to algorithmic modeling and deployment. This structural division ensured clear ownership of tasks, allowing individual contributors to focus on specialized components without bottlenecking the overall project schedule.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h4>3. The Outcome & Business Value</h4>
+                <p>We transformed a complex regression algorithm into an accessible digital product. By deploying the logic through a web interface with dynamic input widgets, the technical barrier was completely removed. Users can instantly run rapid "what-if" scenarios, reducing negotiation time, building trust through objective valuation, and accelerating the real estate transaction lifecycle.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Auth System -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="case-study-title">Authentication System: The Trust Gateway</h2>
+            <div class="case-study-meta">CASE STUDY // MVP STRATEGY & IDENTITY ARCHITECTURE</div>
+            
+            <div class="case-study-section">
+                <h4>1. The Context & Problem</h4>
+                <p>Before consumers can confidently hire peers for delivery errands or localized services, they require a bulletproof Authentication Architecture. A lack of identity verification is the primary technical blocker that stalls early-stage marketplace adoption.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h4>2. The Strategic Approach</h4>
+                <p>I organized the project into a highly focused Minimum Viable Product (MVP), prioritizing strict backend data validation before executing the final cloud deployment. By isolating the highest-risk security requirements first, we systematically eliminated the vulnerabilities that typically plague early platforms.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h4>3. The Outcome & Business Value</h4>
+                <p>The architecture utilizes a strictly decoupled Client-Server Model. Because the visual interface is completely separated from the backend data processing, the product team can now pivot to building revenue-generating features without reconstructing the core security infrastructure. This establishes immediate consumer trust and significantly reduces Time-to-Market for upcoming expansions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: DigitalBank -->
+    <div class="modal-overlay" id="digitalbank-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 class="case-study-title">DigitalBank: Behavioral Wealth Infrastructure</h2>
+            <div class="case-study-meta">CASE STUDY // FINTECH STRATEGY & BEHAVIORAL DESIGN</div>
+            
+            <div class="case-study-section">
+                <h4>1. The Context & Problem</h4>
+                <p>Users lack a secure, unified platform to seamlessly manage daily transactions, automated savings, and credit liabilities. Without precise, real-time feedback and strict systemic discipline, users struggle to build wealth or manage debt effectively.</p>
+            </div>
+            
+            <div class="case-study-section">
+                <h4>2. The Strategic Approach (Features & UX)</h4>
+                <p>I designed the ecosystem as a behavioral conditioning tool. It features a timezone-aware <strong>Automated Cron Engine</strong> that executes savings sweeps independently of server location. To enforce financial discipline, I engineered the <strong>Liquidation Protocol</strong>, utilizing an "Algorithmic Cooling Period" that applies a forced 12-hour time-lock on early withdrawals to prevent impulsive spending. The UX relies on <strong>Beneficial Friction</strong> and clean Modal Overlays to protect users from errors (like loan overpayments) without breaking their visual focus.</p>
+            </div>
+
+            <div class="case-study-section">
+                <h4>3. The Outcome & Business Value</h4>
+                <p>The result is a production-ready financial product that actively drives engagement through gamified credit scoring (e.g., +10 points for on-time payments, -20 for late). By utilizing Firebase Cloud Messaging for real-time alerts and executing a seamless cloud migration to Aiven MySQL, the platform guarantees continuous uptime and impenetrable data security, resulting in a highly reliable solution primed for long-term user retention.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -120,6 +225,36 @@
 
             btn.addEventListener('click', () => {
                 menu.classList.toggle('is-open');
+            });
+
+            /* THE FIX: Upgraded to a Scalable Logic Engine that can handle infinite modals */
+            const openModalBtns = document.querySelectorAll('.open-modal-btn');
+            const closeModalBtns = document.querySelectorAll('.modal-close');
+
+            /* THE FIX: Loops through every single 'Read Case Study' button on the page */
+            openModalBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    /* THE FIX: Reads the secret 'data-target' label to know EXACTLY which modal to open */
+                    const targetModalId = btn.getAttribute('data-target');
+                    const targetModal = document.getElementById(targetModalId);
+                    
+                    if (targetModal) {
+                        targetModal.classList.add('is-open');
+                        document.body.style.overflow = 'hidden'; 
+                    }
+                });
+            });
+
+            /* THE FIX: Loops through every single 'X' close button inside any modal */
+            closeModalBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    /* THE FIX: Finds the specific modal wrapper that the 'X' is currently sitting inside, and closes it */
+                    const parentModal = btn.closest('.modal-overlay');
+                    if (parentModal) {
+                        parentModal.classList.remove('is-open');
+                        document.body.style.overflow = 'auto'; 
+                    }
+                });
             });
         });
 

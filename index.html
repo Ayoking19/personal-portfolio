@@ -15,7 +15,8 @@
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link">Projects</a>
+                <!-- THE FIX: Broadened the tab name to encompass sports, media, and tech deliverables -->
+                <a href="projects.html" class="nav-link">Showcase & Playbooks</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
@@ -27,28 +28,110 @@
         </div>
         
         <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="mobile-link active">Home</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="projects.html" class="mobile-link">Projects</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
+            <!-- THE FIX: Added an inner wrapper to perfectly center and animate the massive text links -->
+            <div class="overlay-content">
+                <a href="index.html" class="mobile-link active">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="projects.html" class="mobile-link">Showcase & Playbooks</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
         </div>
     </nav>
 
+    <!-- THE FIX: Modified the <main> block to reflect the new Product Management narrative and appended the Core Competencies grid -->
     <main class="hero-section">
         <div class="hero-content reveal-on-scroll">
-            <p class="hero-tagline">Ayo | Independent Software Engineer</p>
+            <!-- THE FIX: Updated tagline to position you as a strategist rather than a coder -->
+            <p class="hero-tagline">Ayo | Product Manager & Technical Strategist</p>
             
+            <!-- THE FIX: Shifted the headline from "Architecting" code to "Orchestrating" user experiences -->
             <h1 class="hero-title">
-                Architecting <span class="text-highlight">Robust</span> Digital Solutions.
+                Orchestrating <span class="text-highlight">Seamless</span> Digital Experiences.
             </h1>
             
+            <!-- THE FIX: Rewrote description to highlight your CS background as a translation tool, focusing on your passions for sports, entertainment, and intuitive rules -->
             <p class="hero-description">
-                Specializing in autonomous, end-to-end software development. Over the past year, exponential growth in technical capabilities was achieved through rigorous, self-directed study, heavily utilizing platforms like YouTube to master modern development paradigms. Delivering highly scalable Web and Mobile applications with uncompromising code quality.
+                I leverage my Computer Science foundation to bridge the gap between technical execution and business strategy. I specialize in defining the "what" and "why" of a product, providing clear rules and structure so engineering teams can focus on the "how". Passionate about sports, gaming, and entertainment, I thrive on designing intuitive, low-friction digital ecosystems that are genuinely fun to use.
             </p>
             
             <div class="button-group">
-                <a href="projects.html" class="btn btn-primary">View System Architectures</a>
+                <!-- THE FIX: Changed button text to "View Case Studies" to match standard PM portfolios -->
+                <a href="projects.html" class="btn btn-primary">View Case Studies</a>
                 <a href="contact.html" class="btn btn-secondary">Initiate Contact</a>
+            </div>
+
+            <!-- THE FIX: Expanded the competencies grid to 8 items, demonstrating a highly sought-after T-Shaped Skillset spanning Tech, Sports, and Entertainment -->
+            <div class="competencies-block reveal-on-scroll">
+                <h3 class="competencies-title">Core Competencies</h3>
+                <div class="competencies-grid">
+                    <!-- Tech & Product PM Track -->
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the 🎯 emoji with an SVG target (three concentric circles = bullseye) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+                        <div>
+                            <strong>Product Strategy</strong>
+                            <p>Defining requirements, setting rules, and building roadmaps.</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the 💡 emoji with an SVG light bulb (glass bulb + screw base) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/><path d="M9.5 19h5"/><path d="M10.5 22h3"/></svg></span>
+                        <div>
+                            <strong>User Empathy (UX)</strong>
+                            <p>Simplifying complex logic into frustration-free designs.</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the ⚙️ emoji with an SVG gear (toothed outline + center hole) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+                        <div>
+                            <strong>Agile Coordination</strong>
+                            <p>Organizing workflows and keeping technical teams unblocked.</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the 💬 emoji with an SVG speech bubble (rounded box with a tail at the bottom-left) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+                        <div>
+                            <strong>Technical Translation</strong>
+                            <p>Fluent in CS concepts to communicate perfectly with developers.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sports, Media & Strategy Track -->
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the ⚽ emoji with an SVG football (circle + center pentagon + five seam lines) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="12,8 15.8,10.8 14.3,15.2 9.7,15.2 8.2,10.8"/><path d="M12 8V2.5M15.8 10.8L21 9M14.3 15.2l3.2 4.3M9.7 15.2l-3.2 4.3M8.2 10.8L3 9"/></svg></span>
+                        <div>
+                            <strong>Tactical & Sports Analytics</strong>
+                            <p>Match scouting, spatial analysis, and metric breakdowns (e.g., Expected Goals).</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the 🎮 emoji with an SVG game controller (body + d-pad + two buttons) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 6h10a5 5 0 0 1 5 5v2a4 4 0 0 1-7 2.6L14 14H10l-1 1.6A4 4 0 0 1 2 13v-2a5 5 0 0 1 5-5z"/><path d="M6 10v4M4 12h4"/><circle cx="15.5" cy="11" r="0.8"/><circle cx="18" cy="13" r="0.8"/></svg></span>
+                        <div>
+                            <strong>Esports & Gaming Operations</strong>
+                            <p>Tournament bracket logistics, game balance evaluation, and manual playtesting.</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the 🎬 emoji with an SVG clapperboard (slate body + hinged striped clapper) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9L2.5 4.6 20.5 1.6 21 5.4V9"/><path d="M6.5 5.2L8.5 9M11.5 4.3L13.5 9M16.5 3.4L18.5 9"/></svg></span>
+                        <div>
+                            <strong>Creative Media Production</strong>
+                            <p>Narrative pacing, talent coordination, and low-friction organizational workflows.</p>
+                        </div>
+                    </div>
+                    <div class="competency-item">
+                        <!-- THE FIX: Replaced the ♟️ emoji with an SVG chess pawn (round head, neck collar, tapered body, flat base) -->
+                        <span class="competency-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="3"/><path d="M9.5 11h5"/><path d="M10.5 11c0 3-2.5 4-2.5 7h8c0-3-2.5-4-2.5-7"/><path d="M6 21h12"/></svg></span>
+                        <div>
+                            <strong>Strategic Rule Design</strong>
+                            <p>Long-term positional planning and friction-free process engineering.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

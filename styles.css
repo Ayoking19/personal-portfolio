@@ -106,28 +106,63 @@ body {
     height: 1.5rem;
 }
 
+/* THE FIX: Converted the small dropdown into a massive, fixed overlay */
 .mobile-menu {
-    display: none; 
-    background-color: var(--bg-darker);
-    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* THE FIX: 100vh ensures the menu dynamically stretches to the absolute bottom of any phone screen */
+    height: 100vh;
+    background-color: rgba(17, 24, 39, 0.98); 
+    /* THE FIX: z-index 40 ensures this slides in exactly underneath the navbar (which is z-index 50) so the close button remains visible */
+    z-index: 40; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden; 
+    /* THE FIX: Smoothly fades the black glass over the screen instead of snapping abruptly */
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .mobile-menu.is-open {
-    display: block; 
+    opacity: 1;
+    visibility: visible;
 }
 
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* THE FIX: Pushes the text slightly down initially so it can float upward when opening */
+    transform: translateY(2rem);
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.mobile-menu.is-open .overlay-content {
+    transform: translateY(0);
+}
+
+/* THE FIX: Upgraded links to massive, bold, premium typography */
 .mobile-link {
-    display: block;
     text-decoration: none;
     color: var(--text-dim);
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
-    margin-bottom: 0.25rem;
+    font-size: 2.5rem; 
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-link:hover {
+    color: #ffffff;
+    /* THE FIX: Creates a subtle 3D pop effect when the user taps or hovers */
+    transform: scale(1.05);
 }
 
 .mobile-link.active {
     color: var(--accent-blue);
-    font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -574,4 +609,170 @@ body {
 
 .footer-link:hover, .footer-link:hover svg {
     color: var(--accent-blue-strong);
+}
+
+/* THE FIX: Constructed the physics and styling for the full-screen Editorial Reader Modal */
+/* =========================================
+   9. Editorial Reader Modal
+   ========================================= */
+/* THE FIX: Updated the overlay alignment and trapped the scrolling inside the content box */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(17, 24, 39, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    /* THE FIX: Added align-items to perfectly hover the box in the vertical center of the screen */
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    width: 100%;
+    max-width: 50rem;
+    /* THE FIX: Changed margin to keep the box from touching the extreme top/bottom edges */
+    margin: 2rem 1rem;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    border-radius: 0.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: translateY(2rem);
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0, 1);
+    
+    /* THE FIX: Added an internal scrolling engine to prevent text from spilling out */
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.is-open .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--accent-blue-strong);
+}
+
+.case-study-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+.case-study-meta {
+    font-family: var(--font-mono);
+    color: var(--accent-blue);
+    font-size: 0.875rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(55, 65, 81, 1);
+    padding-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.case-study-section {
+    margin-bottom: 2rem;
+}
+
+.case-study-section h4 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.case-study-section p {
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* THE FIX: Added styles for the new Core Competencies grid on the Home Page */
+/* =========================================
+   8. Core Competencies Block
+   ========================================= */
+.competencies-block {
+    margin-top: 5rem;
+    text-align: left;
+    background-color: rgba(31, 41, 55, 0.4);
+    border: 1px solid rgba(55, 65, 81, 1);
+    border-radius: 0.75rem;
+    padding: 2rem;
+}
+
+.competencies-title {
+    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(55, 65, 81, 1);
+    padding-bottom: 0.75rem;
+}
+
+.competencies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .competencies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.competency-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.competency-icon {
+    font-size: 1.5rem;
+    background-color: rgba(17, 24, 39, 0.5);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.competency-item strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.competency-item p {
+    color: var(--text-dim);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
 }
