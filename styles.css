@@ -589,6 +589,10 @@ body {
     border-top: 1px solid rgba(55, 65, 81, 1);
     display: flex;
     justify-content: center;
+    /* THE FIX: Space between the two profile links */
+    gap: 2rem;
+    /* THE FIX: Lets the links wrap onto two lines on very narrow phones instead of overflowing */
+    flex-wrap: wrap;
 }
 
 .footer-link {

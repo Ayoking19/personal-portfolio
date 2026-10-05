@@ -15,11 +15,12 @@
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link">Projects</a>
+                <!-- THE FIX: Label now matches the other pages -->
+                <a href="projects.html" class="nav-link">Showcase & Playbooks</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </div>
             
-            <button type="button" id="mobile-menu-btn" class="mobile-toggle">
+            <button type="button" id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -27,17 +28,21 @@
         </div>
         
         <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="mobile-link">Home</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="projects.html" class="mobile-link">Projects</a>
-            <a href="contact.html" class="mobile-link active">Contact</a>
+            <!-- THE FIX: Added the overlay wrapper so the links stack in a column like the other pages -->
+            <div class="overlay-content">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <!-- THE FIX: Label now matches the other pages -->
+                <a href="projects.html" class="mobile-link">Showcase & Playbooks</a>
+                <a href="contact.html" class="mobile-link active">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- THE FIX: Broadened the contact subtitle to invite inquiries across Sports, Media, Entertainment, and Product Leadership -->
     <main class="contact-wrapper">
         <div class="contact-card reveal-on-scroll">
-            <h2 class="contact-title">Initialize Communication</h2>
+            <h2 class="contact-title">	Let's Build Something Together</h2>
             <p class="contact-subtitle">Open to high-impact collaborations across Product Management, Sports Data & Scouting, Esports Operations, Creative Media Production, and Strategic Advisory. Send a message below to connect with me directly on WhatsApp.</p>
             
             <div class="contact-info-box">
@@ -53,19 +58,19 @@
 
             <form id="contact-form" action="#" method="POST" class="contact-form" novalidate>
                 <div class="form-group">
-                    <label for="name" class="form-label">Identification (Name)</label>
+                    <label for="name" class="form-label">Your Name</label>
                     <input type="text" id="name" name="name" required class="form-input">
-                    <p id="name-error" class="form-error hidden">String input is required.</p>
+                    <p id="name-error" class="form-error hidden">Please tell me your name.</p>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email" class="form-label">Return Address (Email)</label>
+                    <label for="email" class="form-label">Your Email</label>
                     <input type="email" id="email" name="email" required class="form-input">
                     <p id="email-error" class="form-error hidden">Valid email format [a string formatted to comply with SMTP addressing protocols] is required.</p>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message" class="form-label">Payload (Message)</label>
+                    <label for="message" class="form-label">Your Message</label>
                     <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
                     <p id="message-error" class="form-error hidden">Data payload cannot be empty.</p>
                 </div>
@@ -80,6 +85,10 @@
                 <a href="https://github.com/Ayoking19" target="_blank" rel="noopener noreferrer" class="footer-link">
                     <svg fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
                     GitHub Profile
+                </a>
+                <!-- THE FIX: LinkedIn is where recruiters actually search for candidates -->
+                <a href="https://www.linkedin.com/in/oluyemi-ayomikun-59bbba294?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    LinkedIn Profile
                 </a>
             </div>
         </div>
@@ -147,6 +156,33 @@
 
                     window.open(whatsappUrl, '_blank');
                     form.reset();
+                }
+            });
+        });
+
+        // THE FIX: One helper that closes every open modal and unlocks page scrolling
+        function closeAllModals() {
+            // THE FIX: Finds every modal currently open and removes its open state
+            document.querySelectorAll('.modal-overlay.is-open').forEach((modal) => {
+                modal.classList.remove('is-open');
+            });
+            // THE FIX: Restores scrolling on the page behind the modal
+            document.body.style.overflow = 'auto';
+        }
+
+        // THE FIX: Event listener [code that waits for something to happen, like a key press, then runs] for the Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        // THE FIX: Clicking the dark backdrop closes the modal, but clicking inside the white box does not
+        document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+            overlay.addEventListener('click', (event) => {
+                // THE FIX: event.target is what was actually clicked, so this only fires on the backdrop itself
+                if (event.target === overlay) {
+                    closeAllModals();
                 }
             });
         });

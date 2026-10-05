@@ -20,7 +20,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
-            <button type="button" id="mobile-menu-btn" class="mobile-toggle">
+            <button type="button" id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -46,28 +46,28 @@
             <article class="info-card reveal-on-scroll">
                 <h3 class="card-title">Natural Marketing & The "Classroom Air Freshener"</h3>
                 <p>
-                    My passion for marketing and problem-solving didn't start in a textbook; it started in primary school. My classmates had a habit of farting in class, and the smell was unbearable. Instead of just complaining, I went home, took my dad's empty aftershave bottle, and mixed soap, powder, body cream, and water to engineer my own air freshener. I ran **[User Testing: evaluating a product with real users to ensure it solves the problem without causing new ones]** to make sure the spray didn't make the smell worse. It worked perfectly. The class loved it, and the very next day, I sold my first custom bottle for 300 Naira. I've been identifying problems and building solutions ever since.
+                    My interest in marketing and problem-solving started in primary school, not in a textbook. My classmates had a habit of farting in class, and the smell was unbearable. Instead of just complaining about it, I went home, took my dad's empty aftershave bottle, and mixed soap, powder, body cream, and water to make my own air freshener. I ran user testing to check the spray didn't make the smell worse. It didn't. It worked, the class loved it, and the very next day I sold my first custom bottle for 300 Naira. Honestly, I've been doing the same thing since: spotting a problem and building something to fix it.
                 </p>
             </article>
 
             <article class="info-card reveal-on-scroll">
                 <h3 class="card-title">Scaling Solutions & Tech Translation</h3>
                 <p>
-                    That entrepreneurial instinct only grew. In secondary school, I identified a **[Market Gap: an unfulfilled customer need within a specific demographic]** for cold drinking water, so I froze bottles overnight and sold them for a profit. In university, recognizing the late-night curfew blocked students from buying cold drinks, I rented a fridge, stocked it, and ran a mini-distribution hub. Today, as a Computer Science student, I use that exact same mindset. I know how to structure MySQL databases and tech architecture, but <strong>I absolutely despise writing software code.</strong> Instead, I use my CS knowledge as a translation tool to manage engineers, define product rules, and market solutions effectively.
+                    That entrepreneurial instinct only grew. In secondary school, I identified a Market Gap for cold drinking water, so I froze bottles overnight and sold them for a profit. In university, recognizing the late night curfew blocked students from buying cold drinks, I rented a fridge, stocked it, and ran a mini-distribution hub. Today, as a Computer Science student, I use that exact same mindset. I know how to structure MySQL databases and tech architecture. I want to use my CS knowledge as a translation tool to manage engineers, define product rules, and market solutions effectively.
                 </p>
             </article>
 
             <article class="info-card reveal-on-scroll">
                 <h3 class="card-title">Sports Data, Scouting & Gaming</h3>
                 <p>
-                    Beyond marketing, my life is anchored by sports and gaming. As a deeply devoted Arsenal fan, I am glued to football. I understand deep tactical metrics and utilize tools like **[Wyscout: a premier professional football platform used for player scouting and match analysis]**, Microsoft Excel, and Power BI to evaluate talent based on strict criteria. When I'm not analyzing sports, I'm playing chess or testing video games. I have a meticulous eye for **[Quality Assurance: the process of identifying bugs and suggesting user-experience improvements]**, catching both massive flaws and the tiniest details that make a game fun.
+                    Outside marketing, my life mostly revolves around sports and gaming. I'm a devoted Arsenal fan, and I'm glued to football. I follow the tactical metrics closely and use Wyscout, Microsoft Excel, and Power BI to evaluate talent against strict criteria. When I'm not analyzing sports, I'm playing chess or testing video games. I have a good eye for Quality Assurance. I'll catch the obvious flaws, but I also notice the small details that make a game fun.
                 </p>
             </article>
             
             <article class="info-card reveal-on-scroll">
                 <h3 class="card-title">The Culture: Friendly, Youthful & Authentic</h3>
                 <p>
-                    I am trustworthy, friendly, and highly expressive. I believe the best work happens in fun, youthful, and low-stress environments. Whether I am writing football journalism, spotting game bugs, or marketing a new product, I don't get stressed when I am doing what I love. My philosophy is simple: identify the problem, build the solution, keep the team laughing, and never underestimate the power of a great plate of beans.
+                    I'm trustworthy, friendly, and very expressive. I believe the best work happens somewhere fun, youthful, and low-stress. Football journalism, game bugs, a new product to market: when I'm doing what I love, I don't get stressed. My philosophy is simple. Find the problem and build the solution
                 </p>
             </article>
         </div>
@@ -80,6 +80,33 @@
             
             btn.addEventListener('click', () => {
                 menu.classList.toggle('is-open');
+            });
+        });
+
+        // THE FIX: One helper that closes every open modal and unlocks page scrolling
+        function closeAllModals() {
+            // THE FIX: Finds every modal currently open and removes its open state
+            document.querySelectorAll('.modal-overlay.is-open').forEach((modal) => {
+                modal.classList.remove('is-open');
+            });
+            // THE FIX: Restores scrolling on the page behind the modal
+            document.body.style.overflow = 'auto';
+        }
+
+        // THE FIX: Event listener [code that waits for something to happen, like a key press, then runs] for the Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        // THE FIX: Clicking the dark backdrop closes the modal, but clicking inside the white box does not
+        document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+            overlay.addEventListener('click', (event) => {
+                // THE FIX: event.target is what was actually clicked, so this only fires on the backdrop itself
+                if (event.target === overlay) {
+                    closeAllModals();
+                }
             });
         });
 

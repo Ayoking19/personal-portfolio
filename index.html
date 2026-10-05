@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oluyemi Ayomikun - Software Engineer</title>
+    <!-- THE FIX: Title now matches your real career direction -->
+    <title>Oluyemi Ayomikun | Aspiring Product Manager & Technical Strategist</title>
+    <!-- THE FIX: The text Google shows under your link in search results -->
+    <meta name="description" content="Computer Science student turning technical knowledge into product strategy. Product management, sports analytics, and gaming QA case studies.">
+    <!-- THE FIX: Open Graph tags control the preview card when your link is shared on WhatsApp, LinkedIn, and X -->
+    <meta property="og:title" content="Oluyemi Ayomikun | Aspiring Product Manager">
+    <!-- THE FIX: The second line of text on the preview card -->
+    <meta property="og:description" content="Case studies in product strategy, sports data, and gaming QA.">
+    <!-- THE FIX: Tells platforms this is a normal website page -->
+    <meta property="og:type" content="website">
+    <!-- THE FIX: Replace with the full web address of a 1200x630 preview image after you host the site -->
+    <meta property="og:image" content="https://YOUR-SITE-URL/preview.jpg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +31,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             
-            <button type="button" id="mobile-menu-btn" class="mobile-toggle">
+            <button type="button" id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
@@ -51,13 +62,16 @@
             
             <!-- THE FIX: Rewrote description to highlight your CS background as a translation tool, focusing on your passions for sports, entertainment, and intuitive rules -->
             <p class="hero-description">
-                I leverage my Computer Science foundation to bridge the gap between technical execution and business strategy. I specialize in defining the "what" and "why" of a product, providing clear rules and structure so engineering teams can focus on the "how". Passionate about sports, gaming, and entertainment, I thrive on designing intuitive, low-friction digital ecosystems that are genuinely fun to use.
+                My Computer Science background puts me right between technical execution and business strategy. I like figuring out the what and why of a product, then setting clear rules and structure so engineering can just focus on the how. I'm also into sports, gaming, and entertainment, and that shows up in how I build things. I want them to feel simple, low-friction, and actually fun to use.
             </p>
             
             <div class="button-group">
                 <!-- THE FIX: Changed button text to "View Case Studies" to match standard PM portfolios -->
                 <a href="projects.html" class="btn btn-primary">View Case Studies</a>
-                <a href="contact.html" class="btn btn-secondary">Initiate Contact</a>
+                <!-- THE FIX: Friendlier wording that matches your personality, replacing "Initiate Contact" -->
+                <a href="contact.html" class="btn btn-secondary">Let's Talk</a>
+                <!-- THE FIX: The download attribute makes the browser save the file instead of opening it -->
+                <a href="Oluyemi-Ayomikun-CV.docx" download class="btn btn-secondary">Download CV</a>
             </div>
 
             <!-- THE FIX: Expanded the competencies grid to 8 items, demonstrating a highly sought-after T-Shaped Skillset spanning Tech, Sports, and Entertainment -->
@@ -143,6 +157,33 @@
             
             btn.addEventListener('click', () => {
                 menu.classList.toggle('is-open');
+            });
+        });
+
+        // THE FIX: One helper that closes every open modal and unlocks page scrolling
+        function closeAllModals() {
+            // THE FIX: Finds every modal currently open and removes its open state
+            document.querySelectorAll('.modal-overlay.is-open').forEach((modal) => {
+                modal.classList.remove('is-open');
+            });
+            // THE FIX: Restores scrolling on the page behind the modal
+            document.body.style.overflow = 'auto';
+        }
+
+        // THE FIX: Event listener [code that waits for something to happen, like a key press, then runs] for the Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        // THE FIX: Clicking the dark backdrop closes the modal, but clicking inside the white box does not
+        document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+            overlay.addEventListener('click', (event) => {
+                // THE FIX: event.target is what was actually clicked, so this only fires on the backdrop itself
+                if (event.target === overlay) {
+                    closeAllModals();
+                }
             });
         });
 

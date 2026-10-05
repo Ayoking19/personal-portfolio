@@ -14,25 +14,30 @@
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link active">Projects</a>
+                <!-- THE FIX: Label now matches index.html and about.html -->
+                <a href="projects.html" class="nav-link active">Showcase & Playbooks</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
-            <button type="button" id="mobile-menu-btn" class="mobile-toggle">
+            <button type="button" id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
         </div>
         <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="mobile-link">Home</a>
-            <a href="about.html" class="mobile-link">About</a>
-            <a href="projects.html" class="mobile-link active">Projects</a>
-            <a href="contact.html" class="mobile-link">Contact</a>
+            <!-- THE FIX: Added the overlay wrapper so the links stack in a column like the other pages -->
+            <div class="overlay-content">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <!-- THE FIX: Label now matches the other pages -->
+                <a href="projects.html" class="mobile-link active">Showcase & Playbooks</a>
+                <a href="contact.html" class="mobile-link">Contact</a>
+            </div>
         </div>
     </nav>
 
     <main class="page-container-wide">
-        <h2 class="section-title reveal-on-scroll">Major Deployments</h2>
+        <h2 class="section-title reveal-on-scroll">Deployed Applications</h2>
         
         <!-- THE FIX: Rewrote all 4 project cards with PM summaries and mapped them to their unique Modal boxes -->
         <div class="projects-grid">
@@ -53,7 +58,7 @@
                 </div>
                 <p class="project-tags">Product Strategy | Gamification | UX Simplification</p>
                 <div class="project-description">
-                    <p>A unified social ecosystem designed to eliminate digital platform fatigue. Prioritized User Empathy to create a frictionless, zero-complexity interface, integrating a gamified interaction leaderboard to drastically increase User Retention and daily active sessions.</p>
+                    <p>A social platform built to cut down on digital platform fatigue. I designed it around user empathy, so the interface is simple and there's nothing to figure out. A leaderboard that rewards interaction gives people a reason to come back, which is how it aims to increase user retention and daily active sessions.</p>
                     <button type="button" class="btn btn-secondary open-modal-btn" data-target="socialapp-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
@@ -74,7 +79,7 @@
                 </div>
                 <p class="project-tags">Cross-Functional Leadership | Market Analytics | Accessible UX</p>
                 <div class="project-description">
-                    <p>A web-based predictive application designed to eliminate market information asymmetry. Managed a 7-member cross-functional pipeline to transform complex machine learning data into an accessible, dynamic widget interface.</p>
+                    <p>A web-based predictive app built to tackle market information asymmetry. I managed a cross-functional team of 7 and took complex machine learning data and presented it through an accessible, dynamic widget interface.</p>
                     <button type="button" class="btn btn-secondary open-modal-btn" data-target="housing-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
@@ -95,7 +100,7 @@
                 </div>
                 <p class="project-tags">MVP Strategy | Identity Architecture | Decoupled Systems</p>
                 <div class="project-description">
-                    <p>Architected a bulletproof trust gateway for a localized service marketplace. Delivered a highly focused Minimum Viable Product (MVP) that completely decoupled the visual interface from the security logic, drastically reducing future Time-to-Market.</p>
+                    <p>I designed a trust gateway that can be used as user authentication for any website. The Minimum Viable Product (MVP) was kept narrow, and I separated the visual interface from the security logic. </p>
                     <button type="button" class="btn btn-secondary open-modal-btn" data-target="auth-modal" style="margin-top: 1rem;">Read Case Study</button>
                 </div>
             </article>
@@ -124,7 +129,7 @@
         </div>
 
         <!-- THE FIX: Injected the real Showcase grid based on Excel, Wyscout, Game Testing, and Entrepreneurship -->
-        <h2 class="section-title reveal-on-scroll" style="margin-top: 6rem;">Strategic Dossiers & Skill Showcases</h2>
+        <h2 class="section-title reveal-on-scroll" style="margin-top: 6rem;">Beyond Product: My Other Skills</h2>
         
         <div class="projects-grid">
             
@@ -180,23 +185,23 @@
     <!-- Modal 1: SocialApp -->
     <div class="modal-overlay" id="socialapp-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">SocialApp: Eradicating Platform Fatigue</h2>
-            <div class="case-study-meta">CASE STUDY // PRODUCT STRATEGY & UX GAMIFICATION</div>
+            <div class="case-study-meta">CASE STUDY: PRODUCT STRATEGY & UX GAMIFICATION</div>
             
             <div class="case-study-section">
                 <h4>1. The Context & Problem</h4>
-                <p>Modern digital users face severe platform fatigue caused by Digital Fragmentation—the frustrating necessity of switching between multiple specialized platforms just to message friends, consume public feeds, and discover trends. This context-switching leads to user exhaustion and abandoned sessions.</p>
+                <p>Modern digital users get worn out by their apps. The cause is Digital Fragmentation you have to switch between several specialized platforms just to message friends, browse public feeds, and discover trends. That constant context-switching exhausts users, and they abandon their sessions.</p>
             </div>
             
             <div class="case-study-section">
                 <h4>2. The Strategic Approach</h4>
-                <p>The product was designed around a core philosophy of <strong>User Empathy</strong>. I established a strict Visual Hierarchy, placing high-frequency actions—creating posts, searching profiles, and messaging—in obvious positions to eliminate the learning curve. By dramatically reducing Cognitive Load, users of any technical skill level can navigate complex social interactions without hesitation.</p>
+                <p>I designed the product around user empathy. I set a strict Visual Hierarchy and put the actions people use most (creating posts, searching profiles, and messaging) in obvious spots, so there's no real learning curve. With Cognitive Load kept low, users of any technical skill level can get around without hesitating.
             </div>
 
             <div class="case-study-section">
                 <h4>3. The Outcome & Business Value</h4>
-                <p>To drive engagement, I engineered a dynamic, time-filtered leaderboard showcasing the most interacted posts. This Gamification established a healthy competitive loop, incentivizing creators to craft higher-quality content to reach the "Top 100." The final business value is a highly sticky, unified ecosystem that maximizes User Retention and transforms casual visitors into a loyal daily community.</p>
+                <p>To drive engagement, I built a dynamic, time-filtered leaderboard of the most interacted posts. This Gamification gave creators a reason to compete: write better content and you can reach the "Top 100." The business value is a unified platform that people keep returning to, and that turns casual visitors into a loyal daily community.</p>
             </div>
         </div>
     </div>
@@ -204,23 +209,23 @@
     <!-- Modal 2: House Price Predictor -->
     <div class="modal-overlay" id="housing-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">House Price Predictor: Democratizing Data</h2>
-            <div class="case-study-meta">CASE STUDY // DATA PIPELINE & CROSS-FUNCTIONAL LEADERSHIP</div>
+            <div class="case-study-meta">CASE STUDY: DATA PIPELINE & CROSS-FUNCTIONAL LEADERSHIP</div>
             
             <div class="case-study-section">
                 <h4>1. The Context & Problem</h4>
-                <p>The real estate market is plagued by Information Asymmetry. Real estate pricing depends on high-dimensional data, making it mathematically impossible for end-consumers to calculate accurate baseline values without emotional bias or paying expensive intermediaries.</p>
+                <p>The real estate market has an Information Asymmetry problem. Prices depend on high-dimensional data, so it's very hard for everyday consumers to work out an accurate baseline value without emotional bias or paying expensive intermediaries.</p>
             </div>
             
             <div class="case-study-section">
                 <h4>2. The Strategic Approach</h4>
-                <p>I organized this initiative as a 7-member cross-functional pipeline. The workload was distributed evenly across distinct phases—from Exploratory Data Analysis to algorithmic modeling and deployment. This structural division ensured clear ownership of tasks, allowing individual contributors to focus on specialized components without bottlenecking the overall project schedule.</p>
+                <p>I organized this as a cross-functional team of 7 and split the work evenly across distinct phases, from Exploratory Data Analysis to algorithmic modeling to deployment. Each person had clear ownership of their part, so specialists could focus on their own components and nobody held up the schedule.</p>
             </div>
 
             <div class="case-study-section">
                 <h4>3. The Outcome & Business Value</h4>
-                <p>We transformed a complex regression algorithm into an accessible digital product. By deploying the logic through a web interface with dynamic input widgets, the technical barrier was completely removed. Users can instantly run rapid "what-if" scenarios, reducing negotiation time, building trust through objective valuation, and accelerating the real estate transaction lifecycle.</p>
+                <p>We turned a complex regression algorithm into an accessible digital product. The logic sits behind a web interface with dynamic input widgets, so users don't need any technical background to use it. They can run "what-if" scenarios quickly, which should shorten negotiations, and an objective valuation gives both sides something to trust. That helps the whole transaction move faster.</p>
             </div>
         </div>
     </div>
@@ -228,23 +233,23 @@
     <!-- Modal 3: Auth System -->
     <div class="modal-overlay" id="auth-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">Authentication System: The Trust Gateway</h2>
-            <div class="case-study-meta">CASE STUDY // MVP STRATEGY & IDENTITY ARCHITECTURE</div>
+            <div class="case-study-meta">CASE STUDY: MVP STRATEGY & IDENTITY ARCHITECTURE</div>
             
             <div class="case-study-section">
                 <h4>1. The Context & Problem</h4>
-                <p>Before consumers can confidently hire peers for delivery errands or localized services, they require a bulletproof Authentication Architecture. A lack of identity verification is the primary technical blocker that stalls early-stage marketplace adoption.</p>
+                <p>Before people will hire peers for delivery errands or localized services, they need to trust who they're dealing with, which means a solid Authentication Architecture. Without identity verification, early-stage marketplaces struggle to get adopted, and I saw that as the main technical blocker.</p>
             </div>
             
             <div class="case-study-section">
                 <h4>2. The Strategic Approach</h4>
-                <p>I organized the project into a highly focused Minimum Viable Product (MVP), prioritizing strict backend data validation before executing the final cloud deployment. By isolating the highest-risk security requirements first, we systematically eliminated the vulnerabilities that typically plague early platforms.</p>
+                <p>I organized the project into a focused Minimum Viable Product (MVP). Strict backend data validation came first, and the final cloud deployment came after it. I tackled the highest-risk security requirements early, so we dealt with the kinds of vulnerabilities that often hit new platforms before launch.</p>
             </div>
 
             <div class="case-study-section">
                 <h4>3. The Outcome & Business Value</h4>
-                <p>The architecture utilizes a strictly decoupled Client-Server Model. Because the visual interface is completely separated from the backend data processing, the product team can now pivot to building revenue-generating features without reconstructing the core security infrastructure. This establishes immediate consumer trust and significantly reduces Time-to-Market for upcoming expansions.</p>
+                <p>The architecture uses a decoupled Client-Server Model. The visual interface is separate from the backend data processing, so the product team can move on to revenue-generating features without rebuilding the core security infrastructure. That should help earn consumer trust and shorten Time-to-Market for upcoming expansions.</p>
             </div>
         </div>
     </div>
@@ -252,9 +257,9 @@
     <!-- Modal 4: DigitalBank -->
     <div class="modal-overlay" id="digitalbank-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">DigitalBank: Behavioral Wealth Infrastructure</h2>
-            <div class="case-study-meta">CASE STUDY // FINTECH STRATEGY & BEHAVIORAL DESIGN</div>
+            <div class="case-study-meta">CASE STUDY: FINTECH STRATEGY & BEHAVIORAL DESIGN</div>
             
             <div class="case-study-section">
                 <h4>1. The Context & Problem</h4>
@@ -278,18 +283,18 @@
     <!-- Modal 5: Sports Data -->
     <div class="modal-overlay" id="sports-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">Sports Data Analyst & Football Scout</h2>
-            <div class="case-study-meta">SKILL SHOWCASE // EXCEL, POWER BI & WYSCOUT</div>
+            <div class="case-study-meta">SKILL SHOWCASE: EXCEL, POWER BI & WYSCOUT</div>
             
             <div class="case-study-section">
                 <h4>1. Data Analysis Capabilities</h4>
-                <p>I possess strong technical proficiency in **[Microsoft Excel: advanced spreadsheet software used for data manipulation]**. I am highly capable of structuring large datasets using Pivot Tables and utilizing advanced lookup functions (VLOOKUP/XLOOKUP) to organize player statistics. I can also visualize this data using Microsoft Power BI to create actionable reports for coaches or management.</p>
+                <p>I possess strong technical proficiency in Microsoft Excel. I am highly capable of structuring large datasets using Pivot Tables and utilizing advanced lookup functions (VLOOKUP/XLOOKUP) to organize player statistics. I can also visualize this data using Microsoft Power BI to create actionable reports for coaches or management.</p>
             </div>
             
             <div class="case-study-section">
                 <h4>2. Scouting & Talent Identification</h4>
-                <p>I stay fully up-to-date with modern scouting software, including **[Wyscout: a professional football database containing video and statistical data for thousands of players globally]**. I have a strict, disciplined methodology for judging player potential, ensuring that talent recommendations are based on objective metrics rather than just emotional bias.</p>
+                <p>I stay fully up-to-date with modern scouting software, including Wyscout. I have a strict, disciplined methodology for judging player potential, ensuring that talent recommendations are based on objective metrics rather than just emotional bias.</p>
             </div>
         </div>
     </div>
@@ -297,13 +302,13 @@
     <!-- Modal 6: Game Testing -->
     <div class="modal-overlay" id="gaming-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">Game Testing & Quality Assurance</h2>
-            <div class="case-study-meta">SKILL SHOWCASE // MANUAL QA & USER EXPERIENCE</div>
+            <div class="case-study-meta">SKILL SHOWCASE: MANUAL QA & USER EXPERIENCE</div>
             
             <div class="case-study-section">
                 <h4>1. The Player's Perspective</h4>
-                <p>As a lifelong gamer, I possess an intuitive understanding of what makes a game enjoyable versus frustrating. When testing software, I don't just look for technical crashes; I actively evaluate the **[Core Gameplay Loop: the repetitive actions a player takes, which must be satisfying to retain their attention]** to suggest features that will genuinely please the user base.</p>
+                <p>As a lifelong gamer, I possess an intuitive understanding of what makes a game enjoyable versus frustrating. When testing software, I don't just look for technical crashes; I actively evaluate the <strong>Core Gameplay Loop</strong> to suggest features that will genuinely please the user base.</p>
             </div>
             
             <div class="case-study-section">
@@ -316,18 +321,18 @@
     <!-- Modal 7: Marketing -->
     <div class="modal-overlay" id="marketing-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">Product Marketing & Problem Solving</h2>
-            <div class="case-study-meta">SKILL SHOWCASE // MARKET GAPS & PROTOTYPING</div>
+            <div class="case-study-meta">SKILL SHOWCASE: MARKET GAPS & PROTOTYPING</div>
             
             <div class="case-study-section">
                 <h4>1. Early Problem Identification</h4>
-                <p>My ability to market products stems from an innate talent for identifying localized problems. In primary school, a persistent odor issue in the classroom prompted me to invent a solution. I utilized **[Rapid Prototyping: quickly creating a working model of a product to test its viability]** by mixing aftershave, soap, and powder to create a custom air freshener.</p>
+                <p>My ability to market products stems from an innate talent for identifying localized problems. In primary school, a persistent odor issue in the classroom prompted me to invent a solution. I utilized Rapid Prototyping by mixing aftershave, soap, and powder to create a custom air freshener.</p>
             </div>
             
             <div class="case-study-section">
                 <h4>2. User Testing & Monetization</h4>
-                <p>Before launching the product, I conducted localized testing to ensure the chemical mixture didn't worsen the classroom environment. Upon successful deployment, demand spiked, leading to my first successful sale at 300 Naira. I replicated this exact **[Supply and Demand: the economic model determining the price and availability of goods]** framework in secondary school by selling frozen water, and in university by renting a fridge to supply cold drinks during curfews.</p>
+                <p>Before launching the product, I conducted localized testing to ensure the chemical mixture didn't worsen the classroom environment. Upon successful deployment, demand spiked, leading to my first successful sale at 300 Naira. I replicated this exact Supply and Demand framework in secondary school by selling frozen water, and in university by renting a fridge to supply cold drinks during curfews.</p>
             </div>
         </div>
     </div>
@@ -335,9 +340,9 @@
     <!-- Modal 8: Journalism -->
     <div class="modal-overlay" id="journalism-modal">
         <div class="modal-content">
-            <button class="modal-close">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close case study">&times;</button>
             <h2 class="case-study-title">Football Journalism & Communication</h2>
-            <div class="case-study-meta">SKILL SHOWCASE // EDITORIAL WRITING & TACTICS</div>
+            <div class="case-study-meta">SKILL SHOWCASE: EDITORIAL WRITING & TACTICS</div>
             
             <div class="case-study-section">
                 <h4>1. Tactical Fluency</h4>
@@ -388,6 +393,33 @@
                         document.body.style.overflow = 'auto'; 
                     }
                 });
+            });
+        });
+
+        // THE FIX: One helper that closes every open modal and unlocks page scrolling
+        function closeAllModals() {
+            // THE FIX: Finds every modal currently open and removes its open state
+            document.querySelectorAll('.modal-overlay.is-open').forEach((modal) => {
+                modal.classList.remove('is-open');
+            });
+            // THE FIX: Restores scrolling on the page behind the modal
+            document.body.style.overflow = 'auto';
+        }
+
+        // THE FIX: Event listener [code that waits for something to happen, like a key press, then runs] for the Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+
+        // THE FIX: Clicking the dark backdrop closes the modal, but clicking inside the white box does not
+        document.querySelectorAll('.modal-overlay').forEach((overlay) => {
+            overlay.addEventListener('click', (event) => {
+                // THE FIX: event.target is what was actually clicked, so this only fires on the backdrop itself
+                if (event.target === overlay) {
+                    closeAllModals();
+                }
             });
         });
 
